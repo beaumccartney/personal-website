@@ -1,16 +1,123 @@
 ---
+const email = "mccartney.beausl@gmail.com";
+const projects: [string, string, string][] = [
+  [
+    "https://crp-docs.vercel.app/",
+    "create-ros-project",
+    "A simple and fast CLI tool for managing ROS (Robotics Operating System) projects.",
+  ],
+
+  [
+    "https://github.com/beauslm/golf",
+    "golf - [gol]ang [f]ragment",
+    "Compile a subset of golang to mips-32 assembly. Handwritten tokenizer, recursive descent parser, semantic checker, and assembly generator.",
+  ],
+
+  [
+    "https://github.com/SamuelGarm/CPSC-585",
+    "maximus overdrive",
+    "A 3d roman chariot racing game built in OpenGL and C++.",
+  ],
+];
 
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Beau McCartney</title>
+    <meta name="description" content="My personal website" />
+  </head>
+
+  <body class="text-neutral-700 antialiased">
+    <div class="container mx-auto grid max-w-xl gap-1">
+      <header class="flex justify-between border-b-2 p-4 text-xl">
+        <div class="font-bold">
+          {/* TODO: link to new resume */}
+          <a
+            class="hover:underline"
+            href="https://utfs.io/f/27ac9f65-0d4c-4076-817c-a63b6032cb62-eyyx7p.pdf"
+            target="_blank"
+          >
+            Resume
+          </a>
+        </div>
+        <div class="space-x-10">
+          <a class="hover:underline" href="https://github.com/BeauSLM">GitHub</a
+          >
+          <a
+            class="hover:underline"
+            href="https://www.linkedin.com/in/beau-mccartney-247b0820a/"
+            target="_blank">LinkedIn</a
+          >
+        </div>
+      </header>
+      <main class="space-y-5 p-4">
+        <section>
+          <h1 class="text-xl font-semibold text-neutral-800 hover:underline">
+            <a href={`mailto:${email}`}>{email}</a>
+          </h1>
+
+          <div class="section-items">
+            <p>
+              Hello, I&apos;m Beau! I love learning about the world around me, and
+              exploring it by building.
+            </p>
+
+            <p>
+              I studied software engineering at the University of Calgary,
+              completing my degree in May 2024. I specialize in compiler
+              technology, game engine technology, and computer architecture.
+            </p>
+
+            <p>
+              I&apos;m currently searching for my next opportunity. If you&apos;re
+              interested in working with me, please reach out!
+            </p>
+          </div>
+        </section>
+        <section>
+          <h2 class="text-xl font-semibold text-neutral-800">
+            Projects
+          </h2>
+          <ul class="section-items">
+            {projects.map(([link, name, desc]) => (
+              <li
+                class="rounded-md border border-neutral-200 py-4 pl-3 pr-10 hover:bg-neutral-200"
+              >
+                <a class="space-y-2" href={link} target="_blank">
+                  <h3 class="text-lg font-semibold text-neutral-800">
+                    {name}
+                  </h3>
+                  <p class="text-neutral-500">{desc}</p>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+          <!-- <section> -->
+          <!--   <h2 class="text-xl font-semibold text-neutral-800"> -->
+          <!--     Get in touch -->
+          <!--   </h2> -->
+          <!--   <Web3Form /> -->
+          <!-- </section> -->
+      </main>
+      <!-- TODO: vercel analytics and speed insights -->
+      <!-- <Analytics /> -->
+      <!-- <SpeedInsights /> -->
+    </div>
+  </body>
 </html>
+
+<style>
+.section-items {
+  @apply space-y-3;
+}
+
+section {
+  @apply space-y-4;
+}
+</style>
