@@ -21,7 +21,6 @@ const projects: [string, string, string][] = [
     "A 3d roman chariot racing game built in OpenGL and C++.",
   ],
 ];
-
 ---
 
 <html lang="en">
@@ -34,7 +33,10 @@ const projects: [string, string, string][] = [
     <meta name="description" content="My personal website" />
 
     <meta name="author" content="Beau McCartney" />
-    <meta name="keywords" content="personal, portfolio, website, beau, mccartney, software, engineer" />
+    <meta
+      name="keywords"
+      content="personal, portfolio, website, beau, mccartney, software, engineer"
+    />
   </head>
 
   <body class="text-neutral-700 antialiased">
@@ -68,8 +70,8 @@ const projects: [string, string, string][] = [
 
           <div class="section-items">
             <p>
-              Hello, I&apos;m Beau! I love learning about the world around me, and
-              exploring it by building.
+              Hello, I&apos;m Beau! I love learning about the world around me,
+              and exploring it by building.
             </p>
 
             <p>
@@ -79,36 +81,34 @@ const projects: [string, string, string][] = [
             </p>
 
             <p>
-              I&apos;m currently searching for my next opportunity. If you&apos;re
-              interested in working with me, please reach out!
+              I&apos;m currently searching for my next opportunity. If
+              you&apos;re interested in working with me, please reach out!
             </p>
           </div>
         </section>
         <section>
-          <h2 class="text-xl font-semibold text-neutral-800">
-            Projects
-          </h2>
+          <h2 class="text-xl font-semibold text-neutral-800">Projects</h2>
           <ul class="section-items">
-            {projects.map(([link, name, desc]) => (
-              <li
-                class="rounded-md border border-neutral-200 py-4 pl-3 pr-10 hover:bg-neutral-200"
-              >
-                <a class="space-y-2" href={link} target="_blank">
-                  <h3 class="text-lg font-semibold text-neutral-800">
-                    {name}
-                  </h3>
-                  <p class="text-neutral-500">{desc}</p>
-                </a>
-              </li>
-            ))}
+            {
+              projects.map(([link, name, desc]) => (
+                <li class="rounded-md border border-neutral-200 py-4 pl-3 pr-10 hover:bg-neutral-200">
+                  <a class="space-y-2" href={link} target="_blank">
+                    <h3 class="text-lg font-semibold text-neutral-800">
+                      {name}
+                    </h3>
+                    <p class="text-neutral-500">{desc}</p>
+                  </a>
+                </li>
+              ))
+            }
           </ul>
         </section>
-          <!-- <section> -->
-          <!--   <h2 class="text-xl font-semibold text-neutral-800"> -->
-          <!--     Get in touch -->
-          <!--   </h2> -->
-          <!--   <Web3Form /> -->
-          <!-- </section> -->
+        <!-- <section> -->
+        <!--   <h2 class="text-xl font-semibold text-neutral-800"> -->
+        <!--     Get in touch -->
+        <!--   </h2> -->
+        <!--   <Web3Form /> -->
+        <!-- </section> -->
       </main>
       <SpeedInsights />
     </div>
@@ -116,11 +116,11 @@ const projects: [string, string, string][] = [
 </html>
 
 <style>
-.section-items {
-  @apply space-y-3;
-}
+  .section-items {
+    @apply space-y-3;
+  }
 
-section {
-  @apply space-y-4;
-}
+  section {
+    @apply space-y-4;
+  }
 </style>
